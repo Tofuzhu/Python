@@ -20,14 +20,6 @@ class User():
     def reset_login_attempts(self):
         self.login_attempts=0
 
-
-class Admin(User):
-    def __init__(self,first_name,last_name,login_attempts,**userinfos):
-        super().__init__(first_name,last_name,login_attempts,**userinfos)
-        self.privileges=['can add post','can delete post','can ban user']
-
-    def show_privileges(self):
-        print(self.privileges)
-
-admin=Admin('li','zhang',1)
-admin.show_privileges()
+a=User('ZHIYIN','ZHU',age=18,sex='male')
+a.describe_user()
+a.greet_user()

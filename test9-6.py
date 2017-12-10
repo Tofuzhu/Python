@@ -12,10 +12,10 @@ class Restaurant():
         print("It's "+self.cuisine+".")
 
     def set_number_served(self):
-        kfc.number_served=int(input("Please set the number of people served..."))
+        self.number_served=int(input("Please set the number of people served..."))
 
     def increment_number_served(self,increnum):
-        kfc.number_served+=increnum
+        self.number_served+=increnum
 
 
 

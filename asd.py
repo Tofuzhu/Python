@@ -48,6 +48,6 @@ my_tesla.fill_gas_tank()
 
 my_byd=ElectricCar('byd','qin',2011)
 print(my_byd.get_descriptive_name())
-#zhushi
+
 
 

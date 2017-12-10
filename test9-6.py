@@ -17,19 +17,7 @@ class Restaurant():
     def increment_number_served(self,increnum):
         kfc.number_served+=increnum
 
-kfc=Restaurant("kfc","opened",11)
-kfc.describe_restaurant()
-kfc.open_restaurant()
-print(kfc.number_served)
 
-kfc.number_served=28
-print(kfc.number_served)
-
-#kfc.set_number_served()
-#print("The number is "+str(kfc.number_served))
-
-kfc.increment_number_served(99)
-print("The number is "+str(kfc.number_served))
 
 
 class IceCreamStand(Restaurant):
@@ -41,7 +29,7 @@ class IceCreamStand(Restaurant):
         flavors=[]
 
     def describe_icecreamstand(self):
-        print("the shop named "+self.name+" and it's "+self.cuisine+" and it served "+self.number_served+" peoples")
+        print("the shop named "+self.name+" and it's "+self.cuisine+" and it served "+str(self.number_served)+" peoples.")
 
 dq=IceCreamStand("DQ","opened",100)
-dq.describe_restaurant()
+dq.describe_icecreamstand()

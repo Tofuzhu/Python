@@ -26,10 +26,18 @@ class IceCreamStand(Restaurant):
         self.name=restaurant_name
         self.cuisine=cuisine_type
         self.number_served=number_served
-        flavors=[]
+        self.flavors=["sweet","spicy","bit"]
 
     def describe_icecreamstand(self):
         print("the shop named "+self.name+" and it's "+self.cuisine+" and it served "+str(self.number_served)+" peoples.")
 
+    def add_flavors(self,flavor):
+        self.flavors.append((flavor))
+
+
+
 dq=IceCreamStand("DQ","opened",100)
 dq.describe_icecreamstand()
+print(dq.flavors)
+dq.add_flavors("hot")
+print(dq.flavors)

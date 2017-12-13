@@ -1,24 +1,18 @@
-import json
 
-def get_stored_username():
-    filename='username.json'
-    try:
-        with open(filename,) as f_obj:
-            username=json.load(f_obj)
-    except FileNotFoundError:
-        return None
-    else:
-        return username
 
-def greet_user():
-    username=get_stored_username()
-    if username:
-        print("Welcome back,"+username+"!")
-    else:
-        username=input("What is your name?")
-        filename='user'
-        with open(filename,"w") as f_obj:
-            json.dump(username,f_obj)
-            print("I remember you ! "+username)
+def get_formatted_name(first,middle,last):
+    full_name=first+' '+middle+' '+last
+    return full_name.title()
 
-greet_user()
+if __name__=='__main__':
+    print("Enter 'q' at any time to quit.")
+    while True:
+        first=input('\nPlease give me a first name:')
+        if first=='q':
+            break
+        last=input("\nPlease give me a last name:")
+        if last=='q':
+            break
+
+        formatted_name=get_formatted_name(first,last)
+        print("\tNeatly formatted name: "+formatted_name+".")

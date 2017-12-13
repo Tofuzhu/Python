@@ -1,4 +1,0 @@
-jobs
-wrong
-sheet
-dir

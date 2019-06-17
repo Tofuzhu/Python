@@ -22,3 +22,7 @@ print(film_Rating)
 pattern_People = re.compile((r"<span>(.*?)人评价</span>"))
 film_People = pattern_People.findall(r.text)
 print(film_People)
+# 获取影片短评
+pattern_Quote = re.compile((r"<span class=\"inq\">(.*?)</span>"))
+film_Quote = pattern_Quote.findall(r.text)
+print(film_Quote)

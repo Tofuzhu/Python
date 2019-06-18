@@ -8,6 +8,7 @@ FilmName = []
 FilmRating = []
 FilmPeople = []
 FilmQuote = []
+FilmId = []
 
 for urlnum in range(0, 250, 25):
     r = requests.get(r"https://movie.douban.com/top250?start=" + str(urlnum))
@@ -45,6 +46,12 @@ for urlnum in range(0, 250, 25):
     print(film_Quote)
     FilmQuote += film_Quote
 
+    # 获取豆瓣id
+    pattern_id = re.compile(r"<a href=\"https://movie.douban.com/subject/(.*?)/\" class=\"\">")
+    film_Id = pattern_id.findall(r.text)
+    print(film_Id)
+    FilmId += film_Id
+
     time.sleep(1)
 
 wb = Workbook()
@@ -53,11 +60,13 @@ ws["A1"] = "名称"
 ws["B1"] = "评分"
 ws["C1"] = "参评人数"
 ws["D1"] = "简评"
-print(len(FilmName))
+ws["E1"] = "豆瓣ID"
+
 for id in range(0, 250):
     ws.cell(row=id + 2, column=1).value = FilmName[id]
     ws.cell(row=id + 2, column=2).value = FilmRating[id]
     ws.cell(row=id + 2, column=3).value = FilmPeople[id]
     ws.cell(row=id + 2, column=4).value = FilmQuote[id]
+    ws.cell(row=id + 2, column=4).value = FilmId[id]
 
 wb.save(r"moviedata.xlsx")

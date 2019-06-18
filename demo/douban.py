@@ -4,6 +4,8 @@ import time
 import requests
 from openpyxl import Workbook
 
+import jieba
+
 def getTop250():
     FilmName = []
     FilmRating = []
@@ -72,25 +74,29 @@ def getTop250():
 
     wb.save(r"moviedata.xlsx")
 
+
 def getMoviecomments(movieId):
     commentAllpage = []
-    for commentNum in range(0,300,20):
-        r = requests.get(r"https://movie.douban.com/subject/"+str(movieId)+"/comments?start="+str(commentNum)+"&limit=20&sort=new_score&status=P")
+    for commentNum in range(0, 1000, 20):
+        r = requests.get(r"https://movie.douban.com/subject/" + str(movieId) + "/comments?start=" + str(
+            commentNum) + "&limit=20&sort=new_score&status=P")
         w = open("1.txt", 'w+', encoding="utf-8")
         w.write(r.text)
         w.write(str(r.json))
         w.close()
         patternComment = re.compile(r"<span class=\"short\">(.*?)</span>")
         commentOnepage = patternComment.findall(r.text)
-        #print(commentOnepage)
+        # print(commentOnepage)
         commentAllpage += commentOnepage
         time.sleep(0.5)
     print(commentAllpage)
 
-def
+
+def wordCloud(content):
+    str(content).replace("")
 
 
 
 if __name__ == "__main__":
-    #getTop250()
+    # getTop250()
     getMoviecomments(19971676)

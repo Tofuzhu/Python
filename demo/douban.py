@@ -94,6 +94,7 @@ def getMoviecomments(movieId):
 
 def wordCloud(content):
     str(content).replace("")
+    sd
 
 
 

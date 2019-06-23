@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71740316-265f-4d67-99c0-e2951bd6946f" name="Default" comment="Top 250">
+      <change beforePath="$PROJECT_DIR$/.idea/Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/demo/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/douban.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/douban.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/moviedata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/demo/moviedata.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/douban.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
+            <state relative-caret-position="306">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -420,10 +419,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1487" height="878" extended-state="6" />
+    <frame x="0" y="0" width="1860" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11026878" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16176471" />
       <window_info id="Structure" order="1" weight="0.24920467" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -434,10 +433,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49814913" weight="0.32922733" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32474804" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2467264" side_tool="true" visible="true" weight="0.34270415" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49891067" weight="0.45" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50054467" side_tool="true" visible="true" weight="0.3287234" />
       <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32922733" />
+      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49945533" visible="true" weight="0.3287234" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -555,8 +554,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/douban.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
+        <state relative-caret-position="306">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

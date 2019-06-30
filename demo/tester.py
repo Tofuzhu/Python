@@ -8,22 +8,28 @@ import os
 driver = webdriver.Chrome()
 
 # #get cookies
-# driver.get('https://www.imdb.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.imdb.com%2Fap-signin-handler&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=imdb_us&openid.mode=checkid_setup&siteState=eyJvcGVuaWQuYXNzb2NfaGFuZGxlIjoiaW1kYl91cyIsInJlZGlyZWN0VG8iOiJodHRwczovL3d3dy5pbWRiLmNvbS8_cmVmXz1sb2dpbiJ9&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&tag=imdbtag_reg-20')
-# driver.find_element_by_xpath('//*[@id="ap_email"]').send_keys("zzy19860808@gmail.com")
-# driver.find_element_by_xpath('//*[@id="ap_password"]').send_keys("68mbH4OL")
-# driver.find_element_by_xpath('//*[@id="ap_password"]').submit()
-# cookie = driver.get_cookies()
+def get_cookies():
+    driver.get('https://www.imdb.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.imdb.com%2Fap-signin-handler&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=imdb_us&openid.mode=checkid_setup&siteState=eyJvcGVuaWQuYXNzb2NfaGFuZGxlIjoiaW1kYl91cyIsInJlZGlyZWN0VG8iOiJodHRwczovL3d3dy5pbWRiLmNvbS8_cmVmXz1sb2dpbiJ9&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&tag=imdbtag_reg-20')
+    driver.find_element_by_xpath('//*[@id="ap_email"]').send_keys("zzy19860808@gmail.com")
+    driver.find_element_by_xpath('//*[@id="ap_password"]').send_keys("68mbH4OL")
+    driver.find_element_by_xpath('//*[@id="ap_password"]').submit()
+    cookie = driver.get_cookies()
+    driver.close()
+    return cookie
 # #save to txt
 # w = open("imdb_cookies.txt","w+",encoding="utf-8")
 # w.write(json.dumps(cookie))
 # w.close()
 
-driver.get('https://www.imdb.com/title/tt3741700/')
-w1 = open('imdb_cookies.txt')
-cookie = w1.read()
-cookie =json.loads(cookie)
-for c in cookie:
+
+# w1 = open('imdb_cookies.txt')
+# cookie = w1.read()
+# cookie =json.loads(cookie)
+cookies = get_cookies()
+print(cookies)
+for c in cookies:
     driver.add_cookie(c)
+driver.get('https://www.imdb.com/title/tt3741700/')
 driver.refresh()
 # inputtoolbar = driver.find_element_by_xpath('//*[@id="navbar-query"]')
 # inputtoolbar.send_keys("batman")

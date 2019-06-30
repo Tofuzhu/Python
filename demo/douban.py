@@ -92,9 +92,9 @@ def getMoviecomments(movieId):
     print(commentAllpage)
 
 
-def wordCloud(content):
-    str(content).replace("")
-    sd
+# def wordCloud(content):
+#     str(content).replace("")
+#     sd
 
 
 
